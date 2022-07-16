@@ -1,0 +1,27 @@
+{
+  "name": "js-challenges",
+  "version": "1.0.0",
+  "description": "Repo for coding challenges",
+  "main": "FizzBuzz.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmaaallen/js-challenges.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Jest"
+  ],
+  "author": "Kirsten Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmaaallen/js-challenges/issues"
+  },
+  "homepage": "https://github.com/kmaaallen/js-challenges#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
