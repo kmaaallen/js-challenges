@@ -1,4 +1,19 @@
-import { runningSum, pivotIndex } from './leet';
+import { runningSum, pivotIndex, isIsomorphic } from './leet';
+
+describe("isIsomorphic", function () {
+    it("returns true for 'egg', 'add' ", () => {
+        expect((isIsomorphic("egg", "add"))).toEqual(true);
+    });
+    it("returns false for 'foo', 'bar' ", () => {
+        expect((isIsomorphic("foo", "bar"))).toEqual(false);
+    });
+    it("returns true for 'paper', 'title' ", () => {
+        expect((isIsomorphic("paper", "title"))).toEqual(true);
+    });
+    it("returns false for 'baba', 'badc' ", () => {
+        expect((isIsomorphic("baba", "badc"))).toEqual(false);
+    });
+})
 
 describe("runningSum", function () {
     it("returns [1,3,6,10] for [1,2,3,4]", () => {

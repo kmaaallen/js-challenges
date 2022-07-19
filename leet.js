@@ -1,4 +1,33 @@
 /*
+Given two strings s and t, determine if they are isomorphic.
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+All occurrences of a character must be replaced with another character while preserving the order
+of characters. No two characters may map to the same character, but a character may map to itself.
+*/
+
+export function isIsomorphic(s, t) {
+    let st = {};
+    let ts = {};
+    // First if not same length return false
+    if (s.length !== t.length) {
+        return false;
+    }
+    // Need two dictionaries for bi-directional checking
+    for (var i = 0; i < s.length; i++) {
+        if (!st[s[i]]) {
+            st[s[i]] = t[i];
+        }
+        if (!ts[t[i]]) {
+            ts[t[i]] = s[i];
+        }
+        if (st[s[i]] !== t[i] || ts[t[i]] !== s[i]) {
+            return false;
+        }
+    }
+    return true;
+};
+
+/*
 Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
 Return the running sum of nums.
 */
